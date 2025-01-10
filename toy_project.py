@@ -1,9 +1,5 @@
 import json
 
-#나만 팔로우한 계정은 팔로워에는 없고 팔로잉에만 있음
-#(내 팬이 있는 게 아닌 이상) 이론상 팔로잉 > 팔로워
-#즉 팔로잉을 기준으로 팔로워 목록에 있나없나 판단
-
 with open('following.json', 'r') as file:
     followingFile = json.load(file)
 
@@ -18,3 +14,27 @@ for value in followingFile.values():
 followers = []
 for followersData in followersFile:
     followers.append(followersData["string_list_data"][0]["value"])
+
+result1 = [] #나만 상대를 팔로우하는 계정
+for user in following:
+    if user not in followers:
+        result1.append(user)
+
+result2 = [] #상대만 나를 팔로우하는 계정
+for user in followers:
+    if user not in following:
+        result2.append(user)
+
+print("[나만 상대를 팔로우하는 계정 목록]")
+if not(len(result1)):
+    print("없음")
+else:
+    for user in result1:
+        print(user)
+
+print("[상대만 나를 팔로우하는 계정 목록]")
+if not(len(result2)):
+    print("없음")
+else:
+    for user in result2:
+        print(user)
