@@ -25,16 +25,14 @@ for user in followers:
     if user not in following:
         result2.append(user)
 
-print("[나만 상대를 팔로우하는 계정 목록]")
-if not(len(result1)):
-    print("없음")
-else:
+print("[내 계정의 팔로잉 수: {}]".format(len(following)))
+print("[나만 상대를 팔로우하는 계정 수: {}]".format(len(result1)))
+if len(result1):
     for user in result1:
         print(user)
 
-print("[상대만 나를 팔로우하는 계정 목록]")
-if not(len(result2)):
-    print("없음")
-else:
+print("[내 계정의 팔로워 수: {}]".format(len(followers)))
+print("[상대만 나를 팔로우하는 계정 수: {}]".format(len(result2)))
+if len(result2):
     for user in result2:
         print(user)
