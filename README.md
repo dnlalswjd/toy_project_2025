@@ -9,3 +9,6 @@
 3. '기기에 다운로드' 선택 → 파일 형식을 JSON으로 지정
 4. 압축파일 압축 해제 → 'following.json', 'followers_1.json', 'pending_follow_requests.json' 세 JSON 파일을 파이썬 파일과 같은 위치에 놓기
 5. 파이썬 파일을 실행하고 결과 확인하기
+
+[출력 예시]
+![image](https://github.com/user-attachments/assets/6d0f94e2-1a17-4801-be7a-115557bee12d)
